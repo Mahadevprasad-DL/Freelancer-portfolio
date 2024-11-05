@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 28px;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        .project-container {
+            background-color: #282c34;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin: 10px;
+            flex: 0 0 45%; /* Responsive flex-basis */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.8s ease;
+            position: relative;
+        }
+
+        .project-container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .project-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .project-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        /* Slideshow CSS */
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .slideshow-image {
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
+        .active {
+            display: block;
+            animation: fade 1s ease-in-out;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* menu iteams */
+        header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 15px 30px;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffc107;
+}
+
+.menu-icon {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+}
+
+/* Styles for mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        background-color: black;
+        width: 100%; /* Full width */
+        z-index: 1000;
+        padding: 10px 0; /* Padding for spacing */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links when toggled */
+    }
+
+    .nav-links a {
+        margin: 10px 0; /* Space between links */
+        text-align: center; /* Center align text */
+        font-size: 18px; /* Larger font size for better visibility */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        color: white;
+        font-size: 24px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div>Mahadevprasad DL (Giri)</div>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="service.html">Services</a>
+            <a href="showcase.html">Showcase</a>
+            <a href="index.html">Feedback</a>
+            <a href="review.php">Review</a>
+        </div>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+    </header>
+
+    
+    <h1>The best 10 projects to pursue in freelancing.</h1>
+
+    <div class="container">
+        <div class="project-container">
+            <div class="slideshow-container">
+                <img src="images/real1.png" alt="realestate Image 1" class="project-image slideshow-image active">
+                <img src="images/real2.png" alt="realestate Image 2" class="project-image slideshow-image">
+                <img src="images/real3.png" alt="realestate Image 3" class="project-image slideshow-image">
+                <img src="images/real4.png" alt="realestate Image 4" class="project-image slideshow-image">
+                <img src="images/real5.png" alt="realestate Image 5" class="project-image slideshow-image">
+            </div>
+            
+            <div class="project-title">FlatValue Services and Rentals</div>
+            <div class="project-description">FlatValue Services and Rentals is your trusted partner in finding affordable, high-quality rental homes and properties. With years of experience in the real estate industry, we aim to simplify the renting process for both tenants and property owners.</div>
+        </div>
+
+        <div class="project-container">
+            <div class="slideshow-container">
+                <img src="images/dj1.png" alt="Portfolio Image 1" class="project-image slideshow-image active">
+                <img src="images/dj2.png" alt="Portfolio Image 2" class="project-image slideshow-image">
+                <img src="images/dj3.png" alt="Portfolio Image 3" class="project-image slideshow-image">
+            </div>
+            <div class="project-title">Portfolio Website</div>
+            <div class="project-description">This Django portfolio website highlights personal and professional achievements, featuring sections for projects, certificates, a resume, and contact information. (Python Framework).</div>
+        </div>
+
+        <div class="project-container">
+            <div class="slideshow-container">
+                <img src="images/h1.png" alt="Healthcare Management Image 1" class="project-image slideshow-image active">
+                <img src="images/h2.png" alt="Healthcare Management Image 2" class="project-image slideshow-image">
+            </div>
+            <div class="project-title">Healthcare Management System</div>
+            <div class="project-description">This PHP-MySQL healthcare management system enables secure login, efficient patient data handling, and CRUD operations, ensuring streamlined healthcare administration.</div>
+        </div>
+
+        <div class="project-container">
+            <div class="slideshow-container">
+                <img src="images/g1.png" alt="greet Image 1" class="project-image slideshow-image active">
+                <img src="images/g2.png" alt="greet Image 2" class="project-image slideshow-image">
+            </div>
+            <div class="project-title">Greeting</div>
+            <div class="project-description">This repository displays personalized greetings based on the current date and time using Django. Perfect for dynamic user experiences.</div>
+        </div>
+
+        <div class="project-container">
+            <div class="slideshow-container">
+                <img src="images/t1.png" alt="Speech to Text Image 1" class="project-image slideshow-image active">
+                <img src="images/t2.png" alt="Speech to Text Image 2" class="project-image slideshow-image">
+            </div>
+            <div class="project-title">Speech To Text</div>
+            <div class="project-description">Speech-to-text project: Users register/login via OTP, then activate speech recognition to convert spoken words into text after OTP validation.</div>
+        </div>
+
+        <div class="project-container">
+            <div class="slideshow-container">
+                <img src="images/math.png" alt="Math Game Image" class="project-image slideshow-image active">
+            </div>
+            <div class="project-title">Math Game</div>
+            <div class="project-description">This math quiz uses HTML, CSS, and JavaScript to structure questions, style interactions, and handle scoring with responsive, interactive features.</div>
+        </div>
+
+        <div class="project-container">
+            <div class="slideshow-container">
+                <img src="images/p1.png" alt="Pet Care Image 1" class="project-image slideshow-image active">
+                <img src="images/p2.png" alt="Pet Care Image 2" class="project-image slideshow-image">
+                <img src="images/p3.png" alt="Pet Care Image 3" class="project-image slideshow-image">
+                <img src="images/p4.png" alt="Pet Care Image 4" class="project-image slideshow-image">
+            </div>
+            <div class="project-title">Pet Care Website</div>
+            <div class="project-description">A Pet Care Website is a digital platform designed to provide pet owners with valuable information, resources, and services related to pet care.</div>
+        </div>
+    </div>
+
+    <script>
+           document.getElementById('menu-icon').onclick = function() {
+               const navLinks = document.getElementById('nav-links');
+               navLinks.classList.toggle('show');
+            };
+
+        const slideshowContainers = document.querySelectorAll('.slideshow-container');
+
+        slideshowContainers.forEach(container => {
+            let slideIndex = 0;
+            const slides = container.querySelectorAll('.slideshow-image');
+            const totalSlides = slides.length;
+
+            function showSlides() {
+                slides.forEach((slide, index) => {
+                    slide.classList.remove('active');
+                });
+                slideIndex++;
+                if (slideIndex >= totalSlides) {
+                    slideIndex = 0;
+                }
+                slides[slideIndex].classList.add('active');
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+
+            showSlides(); // Start the slideshow for each container
+        });
+    </script>
+</body>
+</html>

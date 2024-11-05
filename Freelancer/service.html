@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Elegant Feedback Form Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+    
+    <title>Freelance Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            color: white;
+            padding: 15px 30px;
+            width: 100%;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffc107;
+        }
+
+        .menu-icon {
+            display: none; /* Hidden by default */
+            cursor: pointer;
+        }
+
+        /* Styles for mobile */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide links by default on mobile */
+                flex-direction: column; /* Stack links vertically */
+                position: absolute;
+                top: 60px; /* Adjust based on header height */
+                right: 0;
+                background-color: black;
+                width: 100%; /* Full width */
+                z-index: 1000;
+                padding: 10px 0; /* Padding for spacing */
+            }
+
+            .nav-links.show {
+                display: flex; /* Show links when toggled */
+            }
+
+            .nav-links a {
+                margin: 10px 0; /* Space between links */
+                text-align: center; /* Center align text */
+                font-size: 18px; /* Larger font size for better visibility */
+            }
+
+            .menu-icon {
+                display: block; /* Show menu icon on mobile */
+                color: white;
+                font-size: 24px;
+            }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background-color: #282c34;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .service-title {
+            font-size: 22px;
+            font-weight: bold;
+            padding: 15px;
+            background-color: #333;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .service-title:hover {
+            background-color: #444;
+            transform: scale(1.03);
+        }
+
+        .service-content {
+            background-color: #444;
+            color: powderblue;
+            padding: 15px;
+            margin-top: 5px;
+            border-radius: 5px;
+            display: none; /* Hide service content by default */
+        }
+
+        .service-content ul {
+            list-style-type: disc;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .service-content li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .contact-details {
+            padding: 15px;
+            background-color: #444;
+            color: #ffc107;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div>Mahadevprasad DL (Giri)</div>
+        </div>
+        <div class="nav-links" id="nav-links">
+            <a href="Home.html">Home</a>
+            <a href="service.html">Services</a>
+            <a href="showcase.html">Showcase</a>
+            <a href="index.html">Feedback</a>
+            <a href="review.php">Review</a>
+        </div>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+    </header>
+
+    <div class="container">
+        <div class="service-title" onclick="toggleContent('webDevelopment')">1. Web Development Services</div>
+        <div id="webDevelopment" class="service-content">
+            <ul>
+                <li>Custom Web Development: Building responsive websites tailored to client needs.</li>
+                <li>UI/UX Design Consulting: Providing innovative and user-friendly interface design.</li>
+                <li>2 Weeks of Post-Delivery Support: Free technical support for two weeks post-project.</li>
+                <li>Final Demo & Project Documentation: Comprehensive demo and full documentation.</li>
+                <li>Student Discount: Special rates for students and educational projects.</li>
+                <li>3 Google Meet Sessions: Progress showcase and feedback during the project.</li>
+            </ul>
+        </div>
+
+        <div class="service-title" onclick="toggleContent('machineLearning')">2. Machine Learning & AI Solutions</div>
+        <div id="machineLearning" class="service-content">
+            <ul>
+                <li>Custom ML Models: Developing tailored ML models for specific needs.</li>
+                <li>End-to-End Model Deployment: Seamless integration into your application.</li>
+                <li>ML Project Support & Documentation: Detailed project notes and insights.</li>
+                <li>Demo Sessions and Technical Support: 3 Google Meet sessions, plus support.</li>
+                <li>Screenshots and Project Walkthroughs: Visual explanations of each project phase.</li>
+                <li>Student Discounts: Reduced rates for academic projects.</li>
+            </ul>
+        </div>
+
+        <div class="service-title" onclick="toggleContent('uiuxDesign')">3. UI/UX Design Services</div>
+        <div id="uiuxDesign" class="service-content">
+            <ul>
+                <li>Design Consulting and Prototyping: Crafting wireframes, mockups, and prototypes.</li>
+                <li>User-Centered Design: Intuitive interfaces for a smooth user experience.</li>
+                <li>Visual Design: Professional and brand-consistent visual design.</li>
+                <li>Responsive and Mobile-First Approach: Designs optimized for all devices.</li>
+                <li>Feedback Sessions: 3 Google Meet sessions for progress review.</li>
+            </ul>
+        </div>
+
+        <div class="service-title" onclick="toggleContent('projectShowcase')">4. Project Showcase and Case Studies</div>
+        <div id="projectShowcase" class="service-content">
+            <ul>
+                <li>Live Demonstrations of Completed Projects: Showcasing past projects.</li>
+                <li>In-Depth Case Studies: Problem, solution, and technology details.</li>
+                <li>Screenshot Gallery: Interface and result visuals.</li>
+                <li>Client Testimonials: Reviews and testimonials from clients.</li>
+            </ul>
+        </div>
+
+        <div class="service-title" onclick="toggleContent('educationalSupport')">5. Educational Support & Resources</div>
+        <div id="educationalSupport" class="service-content">
+            <ul>
+                <li>Notes & Documentation: Detailed project documentation for ML projects.</li>
+                <li>3 Google Meet Training Sessions: Guide clients through project understanding.</li>
+                <li>Discounted Student Rates: Special pricing for students.</li>
+                <li>Ideas and Guidance for Projects: Advice on web development, ML, and UI/UX.</li>
+            </ul>
+        </div>
+
+        <div class="service-title" onclick="toggleContent('contactInfo')">6. Contact Information</div>
+        <div id="contactInfo" class="service-content">
+            <ul>
+                <li><strong>Name:</strong> Mahadevprasad DL (Giri)</li>
+                <li><strong>Email:</strong> girishdl78524@gmail.com</li>
+                <li><strong>Contact:</strong> 9591921668</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle the navigation links
+        document.getElementById('menu-icon').onclick = function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('show');
+        };
+
+        // Function to toggle content visibility
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            const isVisible = content.style.display === 'block';
+            // Hide all content
+            const contents = document.querySelectorAll('.service-content');
+            contents.forEach(item => {
+                item.style.display = 'none';
+            });
+            // Show the selected content if it was hidden
+            content.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
